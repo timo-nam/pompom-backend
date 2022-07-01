@@ -31,6 +31,7 @@ public class PompomApplication {
 	}
 
 	@GetMapping("/apns-test")
+	@ResponseBody
 	String apnsTest() {
 		/*
 		final SimpleApnsPushNotification pushNotification;
@@ -68,7 +69,7 @@ public class PompomApplication {
 		}
 		 */
 
-		return "redirect:/";
+		return "Notification is sent.";
 	}
 
 
