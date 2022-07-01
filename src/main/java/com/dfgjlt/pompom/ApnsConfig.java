@@ -17,11 +17,12 @@ public class ApnsConfig {
         ApnsClient returnValue = null;
 
         try {
-            File pkcs8File = new ClassPathResource("AuthKey_JMQRCDBP3A.p8").getFile();
+            //File pkcs8File = new ClassPathResource("AuthKey_JMQRCDBP3A.p8").getFile();
+            File pkcs8File = new File("../src/main/resources/AuthKey_JMQRCDBP3A.p8");
 
             returnValue = new ApnsClientBuilder()
                     .setApnsServer(ApnsClientBuilder.DEVELOPMENT_APNS_HOST)
-                    .setSigningKey(ApnsSigningKey.loadFromPkcs8File(pkcs8File, "ICHAN NAM", "JMQRCDBP3A"))
+                    .setSigningKey(ApnsSigningKey.loadFromPkcs8File(pkcs8File, "48GP9CQUU6", "JMQRCDBP3A"))
                     .build();
         } catch (Exception e) {
             e.printStackTrace();
