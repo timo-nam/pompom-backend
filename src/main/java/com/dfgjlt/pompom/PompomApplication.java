@@ -30,10 +30,8 @@ public class PompomApplication {
 		return "We are POMPOM.";
 	}
 
-	@RequestMapping("/apns-test")
-	@ResponseBody
+	@GetMapping("/apns-test")
 	String apnsTest() {
-		/*
 		final SimpleApnsPushNotification pushNotification;
 
 		{
@@ -67,9 +65,8 @@ public class PompomApplication {
 			System.err.println("Failed to send push notification.");
 			e.printStackTrace();
 		}
-		 */
 
-		return "Notification is sent.";
+		return "redirect:/";
 	}
 
 
