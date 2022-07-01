@@ -18,7 +18,7 @@ public class ApnsConfig {
 
         try {
             //File pkcs8File = new ClassPathResource("AuthKey_JMQRCDBP3A.p8").getFile();
-            File pkcs8File = new File("../src/main/resources/AuthKey_JMQRCDBP3A.p8");
+            File pkcs8File = new File("src/main/resources/AuthKey_JMQRCDBP3A.p8");
 
             returnValue = new ApnsClientBuilder()
                     .setApnsServer(ApnsClientBuilder.DEVELOPMENT_APNS_HOST)
