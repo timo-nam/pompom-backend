@@ -30,7 +30,7 @@ public class PompomApplication {
 		return "We are POMPOM.";
 	}
 
-	@GetMapping("/apns-test")
+	@RequestMapping("/apns-test")
 	@ResponseBody
 	String apnsTest() {
 		/*
